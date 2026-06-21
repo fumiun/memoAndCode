@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="true">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="メモ＆CODE39">
+    <meta name="theme-color" content="#667eea">
+    <title>メモ＆CODE39</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 メモ＆CODE39</h1>
+        
+        <div class="input-section">
+            <h2>新規メモ</h2>
+            <textarea id="memoInput" placeholder="メモを入力してください（英数字と記号のみ対応）" maxlength="200" autocorrect="off" autocapitalize="off"></textarea>
+            <small id="inputError" class="error"></small>
+            
+            <div class="barcode-preview">
+                <h3>CODE39プレビュー</h3>
+                <svg id="previewBarcode"></svg>
+            </div>
+            
+            <button id="saveBtn" class="btn btn-save" disabled>💾 保存</button>
+        </div>
+        
+        <div class="memo-list-section">
+            <h2>保存済みメモ</h2>
+            <div id="memoList" class="memo-list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
